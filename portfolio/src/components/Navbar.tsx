@@ -135,7 +135,7 @@ export function Navbar() {
               className="group hidden items-center gap-2 rounded-full bg-accent px-4 py-2.5 text-[13.5px] font-semibold text-accent-contrast transition-colors duration-200 hover:bg-accent-strong sm:inline-flex"
             >
               <Icon name="mail" size={15} />
-              Let's talk
+              Let's talk now
             </a>
 
             <button
