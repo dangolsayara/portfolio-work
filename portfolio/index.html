@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Set the theme before first paint so there is no flash of the wrong
+         one. Reads a saved choice, otherwise follows the system. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme')
+          var dark =
+            saved === 'dark' ||
+            (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          if (dark) document.documentElement.classList.add('dark')
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+        } catch (e) {}
+      })()
+    </script>
+
+    <!-- ── SEO ───────────────────────────────────────────────────────────────
+         EDIT: replace name, description and canonical URL. -->
+    <title>Sayara — UI/UX &amp; Product Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Sayara, a UI/UX and Product Designer creating thoughtful, intuitive and impactful digital experiences."
+    />
+    <meta name="author" content="Sayara" />
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sayara — Product Designer" />
+    <meta property="og:title" content="Sayara — UI/UX &amp; Product Designer" />
+    <meta
+      property="og:description"
+      content="Designing digital experiences that make complex things feel simple."
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/og.png" />
+    <meta property="og:image:alt" content="Sayara — UI/UX & Product Designer" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sayara — UI/UX &amp; Product Designer" />
+    <meta
+      name="twitter:description"
+      content="Designing digital experiences that make complex things feel simple."
+    />
+    <meta name="twitter:image" content="https://example.com/og.png" />
+
+    <!-- Inter is self-hosted and bundled via @fontsource; see src/index.css -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sayara",
+        "jobTitle": "UI/UX & Product Designer",
+        "url": "https://example.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/example",
+          "https://dribbble.com/example",
+          "https://www.behance.net/example"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,366 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   SITE CONTENT
+   ───────────────────────────────────────────────────────────────────────────
+   ▲ SAMPLE CONTENT. Everything below is written to be replaced. Nothing here
+     is a claim about a real company, client, result or person — swap it for
+     your own before publishing, and delete anything you can't defend.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+export const site = {
+  /* ── Identity ─────────────────────────────────────────────────────────── */
+  name: 'Sayara', // EDIT: your full name. Used in the wordmark, SEO and footer.
+  wordmark: 'Sayara', // EDIT: shorter form for the navbar, if different.
+  role: 'UI/UX & Product Designer',
+  email: 'hello@example.com', // EDIT
+  location: 'Kathmandu, Nepal', // EDIT
+  resumeUrl: '/resume.pdf', // EDIT: drop your PDF in /public
+
+  /* `icon` keys come from src/components/Icon.tsx — add one there if you need
+     a network that isn't listed. */
+  socials: [
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/example', icon: 'linkedin' },
+    { label: 'Dribbble', href: 'https://dribbble.com/example', icon: 'dribbble' },
+    { label: 'Behance', href: 'https://behance.net/example', icon: 'behance' },
+  ],
+
+  /* ── Hero ─────────────────────────────────────────────────────────────── */
+  hero: {
+    eyebrow: 'Available for work',
+    headline: 'Designing digital experiences that make complex things feel simple.',
+    subhead:
+      "I'm Sayara, a UI/UX & Product Designer focused on creating thoughtful, intuitive and visually refined digital products.",
+    status: {
+      available: true,
+      availableText: 'Available for Product Design opportunities',
+      // Shown instead when `available` is false:
+      currentText: 'Currently designing digital experiences at CloudTechService',
+    },
+    scrollHint: 'See the work',
+    /** Small facts beside the hero. Keep these honest and specific — the count
+     *  of case studies is read from your project files, not typed here. */
+    facts: [
+      { value: '[N] yrs', label: 'Designing products', icon: 'clock' },
+      { value: 'Web + Mobile', label: 'Platforms', icon: 'monitor' },
+      { value: 'End-to-end', label: 'Research → handoff', icon: 'flow' },
+    ],
+    /** Rotates in the hero's small apparatus panel, one principle at a time. */
+    principles: [
+      'Clarity beats cleverness.',
+      'The interface is the last thing I design.',
+      'A system is a promise you keep twice.',
+      'If it needs a tooltip, it needs another draft.',
+      'Constraints are the brief, not the obstacle.',
+    ],
+  },
+
+  /* ── Introduction ─────────────────────────────────────────────────────── */
+  intro: {
+    heading: "Hi, I'm Sayara. I design with curiosity.",
+    lead: "I'm drawn to the small moments that make an interface feel effortless — the button that feels obvious, the flow that needs no explaining, the detail you only notice when it's missing.",
+    body: [
+      'Most of my work starts somewhere unglamorous: a support thread nobody reads, a spreadsheet built to work around the product, a sentence a user says twice without noticing. I treat those as evidence, then go looking for the structure underneath — because a confusing screen is rarely a screen problem.',
+      'I like the part where the problem is still shapeless: drawing the flow before the interface, arguing about the empty state, and naming things until the name needs no caption.',
+    ],
+    /** Words given visual weight inside the paragraph flow. */
+    keywords: [
+      { label: 'Research', icon: 'search' },
+      { label: 'Structure', icon: 'sitemap' },
+      { label: 'Empathy', icon: 'heart' },
+      { label: 'Systems', icon: 'layers' },
+      { label: 'Craft', icon: 'pen' },
+    ],
+    statement: ["I don't just design screens.", 'I design how people experience products.'],
+  },
+
+  /* ── Selected Work intro ──────────────────────────────────────────────── */
+  work: {
+    heading: 'Selected Work',
+    support:
+      'Five problems I explored, simplified and shipped. Each one opens as a case study — skim the highlights or read the whole thing.',
+  },
+
+  /* ── Process ──────────────────────────────────────────────────────────── */
+  process: {
+    heading: 'How I turn messy problems into clear experiences.',
+    support:
+      "It isn't linear — I loop back constantly. But these five moves are always in the work somewhere.",
+    steps: [
+      {
+        n: '01',
+        icon: 'search',
+        title: 'Understand',
+        short: 'Research users, business goals, and context.',
+        detail:
+          'Interviews, support logs, analytics, and a lot of listening to how people describe the problem in their own words. I want the constraint I don’t know about yet.',
+        artifact: 'Research plan · 12 interviews · behavioural audit',
+      },
+      {
+        n: '02',
+        icon: 'target',
+        title: 'Define',
+        short: 'Turn observations into clear problems and opportunities.',
+        detail:
+          'Synthesis into themes, then a single sharpened problem statement. If I can’t write the problem in one sentence, I don’t understand it yet.',
+        artifact: 'Affinity map · problem statement · success metrics',
+      },
+      {
+        n: '03',
+        icon: 'sparkle',
+        title: 'Explore',
+        short: 'Generate multiple ideas and challenge assumptions.',
+        detail:
+          'Cheap, fast, plural. I sketch the version I believe in and the version I’m arguing against, because the second one usually improves the first.',
+        artifact: 'Sketches · 3 divergent concepts · tradeoff matrix',
+      },
+      {
+        n: '04',
+        icon: 'pen',
+        title: 'Design',
+        short: 'Build flows, interfaces, systems, and prototypes.',
+        detail:
+          'Flows before screens, components before pages, states before polish. Empty, loading, error and edge cases are part of the design, not a follow-up ticket.',
+        artifact: 'Flows · component library · high-fidelity prototype',
+      },
+      {
+        n: '05',
+        icon: 'flask',
+        title: 'Validate',
+        short: 'Test, learn, refine, and measure.',
+        detail:
+          'Five users will tell you most of it. Then I instrument the thing so the next decision is informed by behaviour instead of opinion.',
+        artifact: 'Usability sessions · findings log · post-launch metrics',
+      },
+    ],
+    statement: [
+      "Good design isn't about getting the first idea right.",
+      "It's about being willing to keep asking better questions.",
+    ],
+  },
+
+  /* ── Philosophy ───────────────────────────────────────────────────────── */
+  philosophy: {
+    heading: 'What I believe about design.',
+    support: 'Five things I keep coming back to, and what each one costs.',
+    principles: [
+      {
+        n: '01',
+        icon: 'eye',
+        title: 'Clarity beats cleverness.',
+        body: 'A clever interface makes the designer look smart. A clear one makes the user feel smart. Only one of those gets used twice.',
+      },
+      {
+        n: '02',
+        icon: 'grid',
+        title: 'Every pixel should have a purpose.',
+        body: 'Not minimalism for its own sake — intent. If I can’t say what a mark is doing, it isn’t restraint that removes it, it’s honesty.',
+      },
+      {
+        n: '03',
+        icon: 'sitemap',
+        title: 'Good UX starts before the interface.',
+        body: 'By the time you’re choosing a component, most of the experience has already been decided by the model, the naming and the order of the questions.',
+      },
+      {
+        n: '04',
+        icon: 'box',
+        title: 'Design systems create freedom, not limitations.',
+        body: 'A good system removes the thousand decisions that were never interesting, so the team can spend its judgement on the ten that are.',
+      },
+      {
+        n: '05',
+        icon: 'check',
+        title: 'The best interfaces feel obvious.',
+        body: 'Obvious is expensive. It is what’s left after you’ve removed every explanation the design was leaning on.',
+      },
+    ],
+  },
+
+  /* ── About ────────────────────────────────────────────────────────────── */
+  about: {
+    heading: 'Beyond the pixels.',
+    /** Drop a portrait at /public/portrait.jpg and set this to '/portrait.jpg'.
+     *  Left null, an editorial drawn placeholder is used instead. */
+    portrait: null as string | null,
+    portraitCaption: 'Portrait — [ADD YOUR PHOTO]',
+    body: [
+      'I came to design sideways. I was the person who redrew the group project slides at 1am, who rewrote the form nobody could finish, who kept a note on their phone of interfaces that annoyed them. It took me an embarrassingly long time to realise that was a job.',
+      'What kept me here is the diagnosis. There is a specific pleasure in watching someone struggle with a product, finding the one wrong assumption underneath it, and then watching the struggle disappear. Screens are the output. The interesting part is the reasoning.',
+      "I'm a slow starter and a fast finisher. I work best with people who will tell me a decision is wrong to my face, and I try to be that person for them. I keep a running document of design decisions I regret, which I find more useful than a portfolio of ones I don't.",
+    ],
+    /** Small factual panel. Keep it honest and specific. */
+    facts: [
+      { label: 'Based in', value: '[CITY, COUNTRY]', icon: 'location' },
+      { label: 'Working in', value: 'Product & UI/UX Design', icon: 'briefcase' },
+      { label: 'Currently learning', value: 'Motion design & design engineering', icon: 'motion' },
+      { label: 'Reading', value: '[BOOK]', icon: 'book' },
+      { label: 'Outside design', value: '[INTEREST], [INTEREST]', icon: 'heart' },
+    ],
+    quirks: [
+      'Names Figma layers properly. Every time. It is not negotiable.',
+      'Cannot walk past a badly kerned shopfront sign.',
+      'Photographs signage, wayfinding and parking machines on holiday.',
+      'Writes the empty state before the happy path.',
+    ],
+    closing:
+      "When I'm not designing interfaces, I'm usually [PERSONAL INTEREST]. I think those experiences influence how I notice details, understand people, and approach problems.",
+  },
+
+  /* ── Skills ───────────────────────────────────────────────────────────── */
+  skills: {
+    heading: 'What I bring to a team.',
+    support:
+      'No percentages. A number next to a tool name tells you nothing about whether I can solve your problem.',
+    groups: [
+      {
+        label: 'Product Design',
+        icon: 'flow',
+        items: [
+          'UX Strategy',
+          'User Research',
+          'Information Architecture',
+          'User Flows',
+          'Interaction Design',
+          'Prototyping',
+        ],
+      },
+      {
+        label: 'Visual Design',
+        icon: 'palette',
+        items: [
+          'UI Design',
+          'Design Systems',
+          'Visual Hierarchy',
+          'Typography',
+          'Responsive Design',
+          'Accessibility',
+        ],
+      },
+      {
+        label: 'Tools',
+        icon: 'wand',
+        items: [
+          'Figma',
+          'FigJam',
+          'Adobe Creative Suite',
+          'Framer',
+          'Notion',
+          'AI design tools',
+        ],
+      },
+      {
+        label: 'Collaboration',
+        icon: 'users',
+        items: [
+          'Design Documentation',
+          'Developer Handoff',
+          'Stakeholder Communication',
+          'Design Critique',
+          'Workshop Facilitation',
+        ],
+      },
+    ],
+  },
+
+  /* ── Experience ───────────────────────────────────────────────────────── */
+  experience: {
+    heading: "Where I've been learning and building.",
+    support: 'Roles in reverse order. The full history is in my resume.',
+    /** ▲ SAMPLE. Replace every entry — do not publish invented roles. */
+    roles: [
+      {
+        company: '[COMPANY]',
+        role: 'Product Designer',
+        dates: '2025 — Present',
+        location: 'Remote',
+        description:
+          'Own end-to-end design for [PRODUCT AREA], from research through developer handoff, working alongside [N] engineers and a product manager.',
+        responsibilities: [
+          'Lead discovery research and translate findings into product decisions',
+          'Design flows, interfaces and prototypes across web and mobile',
+          'Maintain and extend the shared component library',
+          'Run design critique and usability sessions',
+        ],
+        achievement: '[MAJOR ACHIEVEMENT — a shipped outcome you can describe honestly]',
+      },
+      {
+        company: '[COMPANY]',
+        role: 'UI/UX Designer',
+        dates: '2024 — 2025',
+        location: '[CITY]',
+        description:
+          'Designed interfaces for [PRODUCT TYPE], balancing a small team, a fast release cadence and a codebase that predated any design system.',
+        responsibilities: [
+          'Redesigned core flows for clarity and conversion',
+          'Established typography, spacing and colour foundations',
+          'Documented components for engineering handoff',
+        ],
+        achievement: '[MAJOR ACHIEVEMENT]',
+      },
+      {
+        company: '[COMPANY / FREELANCE]',
+        role: 'Design Intern → Junior Designer',
+        dates: '2023 — 2024',
+        location: '[CITY]',
+        description:
+          'Supported senior designers across [PROJECT TYPES] while learning the craft in production rather than in isolation.',
+        responsibilities: [
+          'Produced screens, assets and prototypes to spec',
+          'Assisted research synthesis and note-taking',
+          'Built and maintained Figma files and libraries',
+        ],
+        achievement: '[MAJOR ACHIEVEMENT]',
+      },
+    ],
+    education: {
+      label: 'Education',
+      value: '[DEGREE], [INSTITUTION] — [YEARS]',
+    },
+  },
+
+  /* ── Testimonials ─────────────────────────────────────────────────────────
+     Empty by default and the section will not render. Add ONLY real quotes,
+     with permission. A fabricated testimonial is the fastest way to lose a
+     recruiter's trust. */
+  testimonials: [] as {
+    quote: string
+    person: string
+    role: string
+    company: string
+  }[],
+
+  /* ── Currently exploring ──────────────────────────────────────────────── */
+  curiosities: {
+    heading: 'Currently curious about…',
+    items: [
+      { label: 'AI × Product Design', icon: 'wand', note: 'Where the interface should disappear — and where it absolutely should not.' },
+      { label: 'Design Systems', icon: 'box', note: 'Governance as a design problem, not a documentation problem.' },
+      { label: 'Behavioural Psychology', icon: 'brain', note: 'Why people do the slower thing on purpose.' },
+      { label: 'Accessibility', icon: 'accessibility', note: 'Designing for the edge and watching the middle get better.' },
+      { label: 'Motion Design', icon: 'motion', note: 'Timing as an explanation, not decoration.' },
+      { label: 'Complex Workflows', icon: 'flow', note: 'Density done kindly. Power users deserve craft too.' },
+      { label: 'Design Engineering', icon: 'code', note: 'Getting close enough to the code to keep my promises.' },
+    ],
+  },
+
+  /* ── Contact ──────────────────────────────────────────────────────────── */
+  contact: {
+    heading: 'Have a problem worth solving?',
+    support:
+      "I'm always interested in thoughtful products, challenging problems, and people who care about creating better experiences.",
+    responseNote: 'I reply to everything within a couple of days.',
+  },
+
+  footer: {
+    tagline: 'Designed with curiosity & attention to detail.',
+    /** Delete this line once you have replaced the sample content. */
+    sampleNotice: 'Sample content — replace before publishing.',
+  },
+} as const
+
+export const NAV = [
+  { label: 'Work', href: '/#work' },
+  { label: 'About', href: '/#about' },
+  { label: 'Process', href: '/#process' },
+  { label: 'Resume', href: '/#experience' },
+  { label: 'Contact', href: '/#contact' },
+] as const
