@@ -70,8 +70,6 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-rule pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="apparatus-sm">© {new Date().getFullYear()} {site.name}</p>
-          {/* Delete this line once the sample content has been replaced. */}
-          <p className="apparatus-sm">{site.footer.sampleNotice}</p>
         </div>
       </Container>
     </footer>

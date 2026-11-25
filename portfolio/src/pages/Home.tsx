@@ -3,6 +3,9 @@ import { useMeta } from '../lib/useMeta'
 import { Hero } from '../components/sections/Hero'
 import { Intro } from '../components/sections/Intro'
 import { SelectedWork } from '../components/sections/SelectedWork'
+import { GraphicsSection } from '../components/sections/GraphicsSection'
+import { DesignToCode } from '../components/sections/DesignToCode'
+import { LearningSection } from '../components/sections/LearningSection'
 import { ProcessSection } from '../components/sections/ProcessSection'
 import { Philosophy } from '../components/sections/Philosophy'
 import { AboutSection } from '../components/sections/AboutSection'
@@ -27,6 +30,9 @@ export default function Home() {
       <Hero />
       <Intro />
       <SelectedWork />
+      <GraphicsSection />
+      <DesignToCode />
+      <LearningSection />
       <ProcessSection />
       <Philosophy />
       <AboutSection />

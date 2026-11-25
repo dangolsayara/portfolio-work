@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { site } from '../../content/site'
-import { projects } from '../../content/projects'
 import { Icon, type IconName } from '../Icon'
 import { Illustration } from '../Illustration'
-import { ActionLink, AnimatedNumber, Arrow, Container, MagneticLink, Pill } from '../ui'
+import { ActionLink, Arrow, Container, MagneticLink, Pill } from '../ui'
 
 /* ═══════════════════════════════════════════════════════════════════════════
    HERO
@@ -33,7 +32,7 @@ function RotatingPrinciple() {
         </span>
       </div>
 
-      <div className="relative mt-4 h-14">
+      <div className="relative mt-4 h-7">
         <AnimatePresence mode="wait" initial={false}>
           <motion.p
             key={i}
@@ -47,26 +46,6 @@ function RotatingPrinciple() {
           </motion.p>
         </AnimatePresence>
       </div>
-
-      {/* Progress ticks that double as a manual control */}
-      <div className="mt-2 flex gap-1.5" role="group" aria-label="Choose a principle">
-        {items.map((principle, k) => (
-          <button
-            key={principle}
-            type="button"
-            onClick={() => setI(k)}
-            aria-label={principle}
-            aria-pressed={k === i}
-            className="group flex min-h-[36px] flex-1 items-center py-2"
-          >
-            <span
-              className={`block h-[3px] rounded-full transition-colors duration-200 ${
-                k === i ? 'bg-accent' : 'bg-rule-strong/70 group-hover:bg-rule-strong'
-              }`}
-            />
-          </button>
-        ))}
-      </div>
     </div>
   )
 }
@@ -76,8 +55,6 @@ export function Hero() {
   const { hero } = site
   const words = hero.headline.split(' ')
   const lastWord = words.pop() ?? ''
-
-  const disciplines = new Set(projects.flatMap((p) => p.tags)).size
 
   return (
     <section
@@ -169,12 +146,10 @@ export function Hero() {
                 </ActionLink>
               </div>
 
-              {/* Three facts. Two are counted from the content, not typed. */}
+              {/* Three facts, from the site content. */}
               <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-rule pt-6 sm:grid-cols-3">
                 {(
                   [
-                    ['grid', 'Case studies', String(projects.length)],
-                    ['layers', 'Disciplines', String(disciplines)],
                     ...hero.facts.map((f) => [f.icon, f.label, f.value]),
                   ] as [IconName, string, string][]
                 ).map(([icon, label, value], i) => (
@@ -186,7 +161,7 @@ export function Hero() {
                       <span className="label-sm">{label}</span>
                     </dt>
                     <dd className="mt-1.5 text-[19px] font-semibold tracking-[-0.02em]">
-                      {i < 2 ? <AnimatedNumber value={value} /> : value}
+                      {value}
                     </dd>
                   </div>
                 ))}

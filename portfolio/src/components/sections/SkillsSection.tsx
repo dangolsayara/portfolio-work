@@ -12,13 +12,10 @@ export function SkillsSection() {
     <Section id="skills" label="Skills" className="bg-surface/45">
       <Reveal>
         <SectionMark label="Capability" />
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-16">
+        <div className="mt-6">
           <h2 className="display text-[2.15rem] sm:text-[2.6rem] lg:text-[3rem]">
             {skills.heading}
           </h2>
-          <p className="measure text-[15px] leading-relaxed text-ink-soft sm:text-base">
-            {skills.support}
-          </p>
         </div>
       </Reveal>
 

@@ -9,6 +9,7 @@ import Home from './pages/Home'
 /* Case studies are code-split: the homepage ships without eleven chapters of
    layout it may never need. */
 const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'))
+const FigmaPageAccessible = lazy(() => import('./pages/FigmaPageAccessible'))
 
 /** Restores scroll on navigation, and honours #hash targets from any route. */
 function ScrollManager() {
@@ -70,6 +71,9 @@ export default function App() {
             >
               <Routes location={location}>
                 <Route path="/" element={<Home />} />
+                <Route path="/taskly" element={<FigmaPageAccessible slug="taskly" />} />
+                <Route path="/kikisapo" element={<FigmaPageAccessible slug="kikisapo" />} />
+                <Route path="/graphics-flyer" element={<FigmaPageAccessible slug="graphics-flyer" />} />
                 <Route path="/work/:slug" element={<CaseStudyPage />} />
                 <Route path="*" element={<CaseStudyPage />} />
               </Routes>

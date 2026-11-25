@@ -90,15 +90,6 @@ export function ExperienceTimeline() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-5 rounded-panel border border-positive/25 bg-positive-soft p-4">
-                    <p className="flex items-center gap-1.5 label-sm text-positive">
-                      <Icon name="trend" size={14} />
-                      Result
-                    </p>
-                    <p className="measure mt-2 text-[14px] leading-relaxed text-ink">
-                      {role.achievement}
-                    </p>
-                  </div>
                 </div>
               </div>
             </Reveal>
@@ -116,7 +107,20 @@ export function ExperienceTimeline() {
                 </span>
                 <span className="label-sm">{experience.education.label}</span>
               </p>
-              <p className="text-[15px] text-ink-soft">{experience.education.value}</p>
+              <ul className="grid gap-3 sm:grid-cols-3">
+                {experience.education.items.map((e) => (
+                  <li key={e.school} className="card flex flex-col gap-1.5 p-4">
+                    <span className="w-fit rounded-full bg-accent-soft px-2.5 py-0.5 text-[11.5px] font-semibold text-accent">
+                      {e.level}
+                    </span>
+                    <p className="mt-1 text-[15px] leading-snug font-semibold">{e.title}</p>
+                    <p className="text-[13.5px] text-ink-soft">{e.school}</p>
+                    <p className="nums mt-auto pt-2 text-[12.5px] font-medium text-ink-faint">
+                      {e.period}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </ol>

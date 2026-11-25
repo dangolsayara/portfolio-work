@@ -18,9 +18,7 @@ export const site = {
   /* `icon` keys come from src/components/Icon.tsx — add one there if you need
      a network that isn't listed. */
   socials: [
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/example', icon: 'linkedin' },
-    { label: 'Dribbble', href: 'https://dribbble.com/example', icon: 'dribbble' },
-    { label: 'Behance', href: 'https://behance.net/example', icon: 'behance' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sayara-dangol-3883b8192', icon: 'linkedin' },
   ],
 
   /* ── Hero ─────────────────────────────────────────────────────────────── */
@@ -39,7 +37,7 @@ export const site = {
     /** Small facts beside the hero. Keep these honest and specific — the count
      *  of case studies is read from your project files, not typed here. */
     facts: [
-      { value: '[N] yrs', label: 'Designing products', icon: 'clock' },
+      { value: '4+ yrs', label: 'Designing products', icon: 'clock' },
       { value: 'Web + Mobile', label: 'Platforms', icon: 'monitor' },
       { value: 'End-to-end', label: 'Research → handoff', icon: 'flow' },
     ],
@@ -180,8 +178,8 @@ export const site = {
     heading: 'Beyond the pixels.',
     /** Drop a portrait at /public/portrait.jpg and set this to '/portrait.jpg'.
      *  Left null, an editorial drawn placeholder is used instead. */
-    portrait: null as string | null,
-    portraitCaption: 'Portrait — [ADD YOUR PHOTO]',
+    portrait: '/portrait.png' as string | null,
+    portraitCaption: 'Portrait',
     body: [
       'I came to design sideways. I was the person who redrew the group project slides at 1am, who rewrote the form nobody could finish, who kept a note on their phone of interfaces that annoyed them. It took me an embarrassingly long time to realise that was a job.',
       'What kept me here is the diagnosis. There is a specific pleasure in watching someone struggle with a product, finding the one wrong assumption underneath it, and then watching the struggle disappear. Screens are the output. The interesting part is the reasoning.',
@@ -189,27 +187,18 @@ export const site = {
     ],
     /** Small factual panel. Keep it honest and specific. */
     facts: [
-      { label: 'Based in', value: '[CITY, COUNTRY]', icon: 'location' },
+      { label: 'Based in', value: 'Teku, Kathmandu, Nepal', icon: 'location' },
       { label: 'Working in', value: 'Product & UI/UX Design', icon: 'briefcase' },
-      { label: 'Currently learning', value: 'Motion design & design engineering', icon: 'motion' },
-      { label: 'Reading', value: '[BOOK]', icon: 'book' },
-      { label: 'Outside design', value: '[INTEREST], [INTEREST]', icon: 'heart' },
-    ],
-    quirks: [
-      'Names Figma layers properly. Every time. It is not negotiable.',
-      'Cannot walk past a badly kerned shopfront sign.',
-      'Photographs signage, wayfinding and parking machines on holiday.',
-      'Writes the empty state before the happy path.',
+      { label: 'Currently reading', value: 'The Mountain Is You', icon: 'book' },
+      { label: 'Outside design', value: 'Table Tennis, Travel, Dance', icon: 'heart' },
     ],
     closing:
-      "When I'm not designing interfaces, I'm usually [PERSONAL INTEREST]. I think those experiences influence how I notice details, understand people, and approach problems.",
+      "When I'm not designing interfaces, I like to travel and explore new things. I think those experiences influence how I notice details, understand people, and approach problems.",
   },
 
   /* ── Skills ───────────────────────────────────────────────────────────── */
   skills: {
     heading: 'What I bring to a team.',
-    support:
-      'No percentages. A number next to a tool name tells you nothing about whether I can solve your problem.',
     groups: [
       {
         label: 'Product Design',
@@ -251,7 +240,6 @@ export const site = {
         label: 'Collaboration',
         icon: 'users',
         items: [
-          'Design Documentation',
           'Developer Handoff',
           'Stakeholder Communication',
           'Design Critique',
@@ -268,52 +256,54 @@ export const site = {
     /** ▲ SAMPLE. Replace every entry — do not publish invented roles. */
     roles: [
       {
-        company: '[COMPANY]',
-        role: 'Product Designer',
-        dates: '2025 — Present',
-        location: 'Remote',
-        description:
-          'Own end-to-end design for [PRODUCT AREA], from research through developer handoff, working alongside [N] engineers and a product manager.',
-        responsibilities: [
-          'Lead discovery research and translate findings into product decisions',
-          'Design flows, interfaces and prototypes across web and mobile',
-          'Maintain and extend the shared component library',
-          'Run design critique and usability sessions',
-        ],
-        achievement: '[MAJOR ACHIEVEMENT — a shipped outcome you can describe honestly]',
-      },
-      {
-        company: '[COMPANY]',
+        company: 'CloudTech Services',
         role: 'UI/UX Designer',
         dates: '2024 — 2025',
         location: '[CITY]',
         description:
-          'Designed interfaces for [PRODUCT TYPE], balancing a small team, a fast release cadence and a codebase that predated any design system.',
+          'Designed interfaces for a sport related platform, the sunset platform and many more, balancing a small team, a fast release cadence and a codebase that predated any design system.',
         responsibilities: [
           'Redesigned core flows for clarity and conversion',
           'Established typography, spacing and colour foundations',
           'Documented components for engineering handoff',
         ],
-        achievement: '[MAJOR ACHIEVEMENT]',
       },
       {
-        company: '[COMPANY / FREELANCE]',
+        company: 'Sherpa Technologies → CloudTech Services',
         role: 'Design Intern → Junior Designer',
         dates: '2023 — 2024',
         location: '[CITY]',
         description:
-          'Supported senior designers across [PROJECT TYPES] while learning the craft in production rather than in isolation.',
+          'Supported senior designers across insurance-related applications while learning the craft in production rather than in isolation.',
         responsibilities: [
           'Produced screens, assets and prototypes to spec',
           'Assisted research synthesis and note-taking',
           'Built and maintained Figma files and libraries',
         ],
-        achievement: '[MAJOR ACHIEVEMENT]',
       },
     ],
     education: {
       label: 'Education',
-      value: '[DEGREE], [INSTITUTION] — [YEARS]',
+      items: [
+        {
+          level: 'Bachelor’s',
+          title: 'Information Technology',
+          school: 'Purbanchal Vishwavidalaya',
+          period: 'Oct 2015 – 2020',
+        },
+        {
+          level: '+2',
+          title: 'Higher Secondary',
+          school: 'Everest College, Thapathali',
+          period: '2071 – 2072 BS',
+        },
+        {
+          level: 'School',
+          title: 'Schooling',
+          school: 'Arniko Boarding School',
+          period: 'Batch 2070 BS',
+        },
+      ],
     },
   },
 
@@ -336,7 +326,6 @@ export const site = {
       { label: 'Design Systems', icon: 'box', note: 'Governance as a design problem, not a documentation problem.' },
       { label: 'Behavioural Psychology', icon: 'brain', note: 'Why people do the slower thing on purpose.' },
       { label: 'Accessibility', icon: 'accessibility', note: 'Designing for the edge and watching the middle get better.' },
-      { label: 'Motion Design', icon: 'motion', note: 'Timing as an explanation, not decoration.' },
       { label: 'Complex Workflows', icon: 'flow', note: 'Density done kindly. Power users deserve craft too.' },
       { label: 'Design Engineering', icon: 'code', note: 'Getting close enough to the code to keep my promises.' },
     ],
@@ -352,8 +341,6 @@ export const site = {
 
   footer: {
     tagline: 'Designed with curiosity & attention to detail.',
-    /** Delete this line once you have replaced the sample content. */
-    sampleNotice: 'Sample content — replace before publishing.',
   },
 } as const
 

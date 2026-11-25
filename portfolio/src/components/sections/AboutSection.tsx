@@ -83,26 +83,6 @@ export function AboutSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.24}>
-            <div className="mt-14">
-              <h3 className="apparatus mb-6">Small print</h3>
-              <ul className="grid gap-x-10 gap-y-4 sm:grid-cols-2">
-                {about.quirks.map((q, i) => (
-                  <li key={q} className="flex gap-3 text-[14.5px] leading-relaxed text-ink-soft">
-                    <span className="mt-[3px] shrink-0 text-accent">
-                      <Icon
-                        name={(['sparkle', 'type', 'map', 'eye'] as IconName[])[i % 4]}
-                        size={15}
-                        animate="draw"
-                        delay={i * 0.06}
-                      />
-                    </span>
-                    <span>{q}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
         </div>
 
         <Reveal delay={0.08} className="lg:pt-6">
@@ -112,7 +92,7 @@ export function AboutSection() {
               alt={`${site.name}, ${site.role}`}
               loading="lazy"
               decoding="async"
-              className="aspect-[4/5] w-full rounded-xl border border-rule object-cover"
+              className="aspect-[4/5] w-full rounded-xl border border-rule bg-black object-cover object-[50%_15%]"
             />
           ) : (
             <PortraitPlate />
