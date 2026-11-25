@@ -258,8 +258,8 @@ export const site = {
       {
         company: 'CloudTech Services',
         role: 'UI/UX Designer',
-        dates: '2024 — 2025',
-        location: '[CITY]',
+        dates: '2025 — Present',
+        location: 'Kathmandu',
         description:
           'Designed interfaces for a sport related platform, the sunset platform and many more, balancing a small team, a fast release cadence and a codebase that predated any design system.',
         responsibilities: [
@@ -272,7 +272,7 @@ export const site = {
         company: 'Sherpa Technologies → CloudTech Services',
         role: 'Design Intern → Junior Designer',
         dates: '2023 — 2024',
-        location: '[CITY]',
+        location: 'Kathmandu',
         description:
           'Supported senior designers across insurance-related applications while learning the craft in production rather than in isolation.',
         responsibilities: [

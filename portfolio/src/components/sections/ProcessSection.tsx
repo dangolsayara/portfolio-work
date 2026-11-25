@@ -15,11 +15,11 @@ export function ProcessSection() {
     <Section id="process" label="Design process" className="bg-surface/60">
       <Reveal>
         <SectionMark label="Process" />
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-16">
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1.3fr_1fr] lg:items-start lg:gap-16">
           <h2 className="display text-[2.15rem] sm:text-[2.6rem] lg:text-[3rem]">
             {process.heading}
           </h2>
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-start gap-4 lg:pt-3">
             <p className="measure text-[15.5px] leading-relaxed text-ink-soft">
               {process.support}
             </p>

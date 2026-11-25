@@ -1,6 +1,5 @@
 import { site } from '../../content/site'
 import { Icon, type IconName } from '../Icon'
-import { Illustration } from '../Illustration'
 import { Arrow, Container, Reveal, SectionMark } from '../ui'
 
 /* The final section is one question, one obvious button, and a plain list of
@@ -53,8 +52,6 @@ export function ContactCTA() {
                 </span>
                 {site.contact.responseNote}
               </p>
-
-              <Illustration scene="talk" height={120} className="mt-8 hidden sm:block" />
             </Reveal>
 
             <Reveal delay={0.08}>
