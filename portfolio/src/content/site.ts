@@ -55,10 +55,6 @@ export const site = {
   intro: {
     heading: "Hi, I'm Sayara. I design with curiosity.",
     lead: "I'm drawn to the small moments that make an interface feel effortless — the button that feels obvious, the flow that needs no explaining, the detail you only notice when it's missing.",
-    body: [
-      'Most of my work starts somewhere unglamorous: a support thread nobody reads, a spreadsheet built to work around the product, a sentence a user says twice without noticing. I treat those as evidence, then go looking for the structure underneath — because a confusing screen is rarely a screen problem.',
-      'I like the part where the problem is still shapeless: drawing the flow before the interface, arguing about the empty state, and naming things until the name needs no caption.',
-    ],
     /** Words given visual weight inside the paragraph flow. */
     keywords: [
       { label: 'Research', icon: 'search' },
@@ -175,15 +171,14 @@ export const site = {
 
   /* ── About ────────────────────────────────────────────────────────────── */
   about: {
-    heading: 'Beyond the pixels.',
     /** Drop a portrait at /public/portrait.jpg and set this to '/portrait.jpg'.
      *  Left null, an editorial drawn placeholder is used instead. */
     portrait: '/portrait.png' as string | null,
     portraitCaption: 'Portrait',
     body: [
-      'I came to design sideways. I was the person who redrew the group project slides at 1am, who rewrote the form nobody could finish, who kept a note on their phone of interfaces that annoyed them. It took me an embarrassingly long time to realise that was a job.',
-      'What kept me here is the diagnosis. There is a specific pleasure in watching someone struggle with a product, finding the one wrong assumption underneath it, and then watching the struggle disappear. Screens are the output. The interesting part is the reasoning.',
-      "I'm a slow starter and a fast finisher. I work best with people who will tell me a decision is wrong to my face, and I try to be that person for them. I keep a running document of design decisions I regret, which I find more useful than a portfolio of ones I don't.",
+      'Most of my work starts somewhere unglamorous: a support thread nobody reads, a spreadsheet built to work around the product, a sentence a user says twice without noticing. I treat those as evidence, then look for the structure underneath, because a confusing screen is rarely a screen problem.',
+      'What keeps me in the work is diagnosis: finding the one wrong assumption beneath a struggling flow and watching the friction disappear. Screens are the output; the reasoning is the craft.',
+      "I work best with collaborators who challenge decisions directly, and I aim to do the same. I keep a running log of design decisions I would revisit, which teaches me more than a record of the ones that worked.",
     ],
     /** Small factual panel. Keep it honest and specific. */
     facts: [

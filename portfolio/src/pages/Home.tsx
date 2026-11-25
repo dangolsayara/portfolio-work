@@ -1,13 +1,12 @@
 import { site } from '../content/site'
 import { useMeta } from '../lib/useMeta'
 import { Hero } from '../components/sections/Hero'
-import { Intro } from '../components/sections/Intro'
+import { AboutSection } from '../components/sections/AboutSection'
 import { SelectedWork } from '../components/sections/SelectedWork'
 import { GraphicsSection } from '../components/sections/GraphicsSection'
 import { DesignToCode } from '../components/sections/DesignToCode'
 import { ProcessSection } from '../components/sections/ProcessSection'
 import { Philosophy } from '../components/sections/Philosophy'
-import { AboutSection } from '../components/sections/AboutSection'
 import { SkillsSection } from '../components/sections/SkillsSection'
 import { ExperienceTimeline } from '../components/sections/ExperienceTimeline'
 import { Testimonials } from '../components/sections/Testimonials'
@@ -26,13 +25,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Intro />
+      <AboutSection />
       <SelectedWork />
       <GraphicsSection />
       <DesignToCode />
       <ProcessSection />
       <Philosophy />
-      <AboutSection />
       <SkillsSection />
       <ExperienceTimeline />
       <Testimonials />

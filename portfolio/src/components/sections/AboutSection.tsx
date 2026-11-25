@@ -1,9 +1,9 @@
 import { site } from '../../content/site'
 import { Icon, type IconName } from '../Icon'
-import { Reveal, Section, SectionMark } from '../ui'
+import { Pill, Reveal, Section, SectionMark, Statement } from '../ui'
 
-/* An editorial magazine profile, not a résumé block: a portrait column with a
-   specimen label, a dropped initial, and a facts panel set as apparatus. */
+/* One About section: introduction, story, focus areas and a facts panel,
+   followed by the closing statement. */
 
 function PortraitPlate() {
   return (
@@ -37,13 +37,10 @@ function PortraitPlate() {
 }
 
 export function AboutSection() {
-  const { about } = site
-  const [firstPara, ...restParas] = about.body
-  const initial = firstPara.charAt(0)
-  const firstRest = firstPara.slice(1)
+  const { about, intro } = site
 
   return (
-    <Section id="about" label="About">
+    <Section id="about" label="About" className="pt-6 sm:pt-10 lg:pt-14">
       <Reveal>
         <SectionMark label="About" />
       </Reveal>
@@ -51,41 +48,37 @@ export function AboutSection() {
       <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-16">
         <div>
           <Reveal>
-            <h2 className="display text-[2.2rem] sm:text-[2.9rem] lg:text-[3.4rem]">
-              {about.heading}
+            <h2 className="display text-[2rem] sm:text-[2.5rem] lg:text-[2.9rem]">
+              {intro.heading}
             </h2>
           </Reveal>
 
-          <Reveal delay={0.06}>
-            <p className="measure mt-10 text-[16px] leading-[1.75] text-ink">
-              <span
-                className="float-left mt-2 mr-3 text-[3rem] font-semibold leading-[0.72] tracking-[-0.04em] text-accent"
-                aria-hidden="true"
-              >
-                {initial}
-              </span>
-              <span className="sr-only">{initial}</span>
-              {firstRest}
+          <Reveal delay={0.05}>
+            <p className="measure mt-6 text-[17px] leading-[1.65] text-ink sm:text-[18px]">
+              {intro.lead}
             </p>
           </Reveal>
 
-          {restParas.map((para, i) => (
-            <Reveal key={i} delay={0.1 + i * 0.05}>
-              <p className="measure mt-6 text-[15.5px] leading-[1.75] text-ink-soft">{para}</p>
+          {about.body.map((para, i) => (
+            <Reveal key={i} delay={0.09 + i * 0.04}>
+              <p className="measure mt-5 text-[15.5px] leading-[1.75] text-ink-soft">{para}</p>
             </Reveal>
           ))}
 
           <Reveal delay={0.2}>
-            <div className="card mt-10 border-l-4 border-l-accent p-6">
-              <p className="measure text-[1.05rem] leading-relaxed text-ink sm:text-[1.15rem]">
-                {about.closing}
-              </p>
-            </div>
+            <ul className="mt-8 flex flex-wrap gap-2">
+              {intro.keywords.map((k, i) => (
+                <li key={k.label}>
+                  <Pill tone={i === 0 ? 'accent' : 'neutral'} icon={k.icon as IconName}>
+                    {k.label}
+                  </Pill>
+                </li>
+              ))}
+            </ul>
           </Reveal>
-
         </div>
 
-        <Reveal delay={0.08} className="lg:pt-6">
+        <Reveal delay={0.08} className="lg:pt-2">
           {about.portrait ? (
             <img
               src={about.portrait}
@@ -117,6 +110,10 @@ export function AboutSection() {
             ))}
           </dl>
         </Reveal>
+      </div>
+
+      <div className="mt-16 sm:mt-20">
+        <Statement lines={intro.statement} />
       </div>
     </Section>
   )
